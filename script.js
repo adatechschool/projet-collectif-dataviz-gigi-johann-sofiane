@@ -13,30 +13,29 @@ const caviste = document.getElementById("caviste")
 let url = `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/coronavirus-commercants-parisiens-livraison-a-domicile/records?limit=20&refine=type_de_commerce%3A%22Librairie%22`
 
 
-
 const onChange = async () => {
-    //const ulElement = document.querySelector("ul")
     let shops;
     let value = typeCommerce.value;
     console.log("valeur = "+value);
     let text = typeCommerce.options[typeCommerce.selectedIndex].text;
     console.log("texte =" +text);
     console.log(url)
+    
     await fetch(url)
     .then(response => response.json())
     .then(response2 => {
-        shops=response2.shops;
+       shops = response2;
         console.log("test", shops)
     })
 }
 
-console.log("test 2", shops)
+console.log(onChange());
 
-onChange();
+console.log("test 2", shops)
 
 //e.onchange = onChange;
 
-console.log("jeux = "+typeCommerce.value)
+//console.log("jeux = "+typeCommerce.value)
 
 
 //let choiceCommerce = fetch(`https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/coronavirus-commercants-parisiens-livraison-a-domicile/records?limit=20&refine=type_de_commerce%3A%22${typeCommerce[0]}%22`)
