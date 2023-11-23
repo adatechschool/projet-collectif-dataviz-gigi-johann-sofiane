@@ -6,21 +6,35 @@ const disquaire = document.getElementById("disquaire")
 const chocolaterie = document.getElementById("chocolaterie")
 const caviste = document.getElementById("caviste")
 
-let e = typeCommerce
+//let e = typeCommerce
 
-let url = `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/coronavirus-commercants-parisiens-livraison-a-domicile/records?limit=20&refine=type_de_commerce%3A%22${e.value}%22`
+//let url = `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/coronavirus-commercants-parisiens-livraison-a-domicile/records?limit=20&refine=type_de_commerce%3A%22${typeCommerce.value}%22`
 
-function onChange(typeCommerce) {
-    let value = e.value;
-    let text = e.options[e.selectedIndex].text;
-    //console.log(value, text);
-    fetch(url)
+let url = `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/coronavirus-commercants-parisiens-livraison-a-domicile/records?limit=20&refine=type_de_commerce%3A%22Librairie%22`
+
+
+
+const onChange = async () => {
+    //const ulElement = document.querySelector("ul")
+    let shops;
+    let value = typeCommerce.value;
+    console.log("valeur = "+value);
+    let text = typeCommerce.options[typeCommerce.selectedIndex].text;
+    console.log("texte =" +text);
+    console.log(url)
+    await fetch(url)
     .then(response => response.json())
-    .then(response2 => console.log(response2))
-    }
+    .then(response2 => {
+        shops=response2.shops;
+        console.log("test", shops)
+    })
+}
 
-  e.onchange = onChange;
-  onChange(typeCommerce);
+console.log("test 2", shops)
+
+onChange();
+
+//e.onchange = onChange;
 
 console.log("jeux = "+typeCommerce.value)
 
