@@ -62,7 +62,6 @@ const newSelect = async () => {
         //document.getElementById("adresses").innerHTML = 
         shops.map((shop) => {
             //console.log(shop.adresse)
-
             document.getElementById("nom_du_commerce").innerHTML +=shop.nom_du_commerce
             document.getElementById("adresses").innerHTML +=shop.adresse
             document.getElementById("code_postal").innerHTML +=shop.code_postal
