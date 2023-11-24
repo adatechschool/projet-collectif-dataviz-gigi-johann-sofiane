@@ -10,15 +10,27 @@
     <label for="typeCommerce">Faites votre choix:</label>
 <br>
 <br>
-<select name="commerces" id="typeCommerce">
+<select name="commerces" id="typeCommerce" onchange="newSelect()">
   <option value="">--Merci de choisir une option--</option>
-  <option value="jeux">Jeux et jouets</option>
-  <option value="librairie">Librairie</option>
-  <option value="fleuriste">Fleuriste</option>
-  <option value="disquaire">Disquaire</option>
-  <option value="chocolaterie">Chocolaterie et patisserie</option>
-  <option value="caviste">Caviste</option>
+  <option value="Jouets%20-%20Jeux">Jeux et jouets</option>
+  <option value="Librairie">Librairie</option>
+  <option value="Fleuriste">Fleuriste</option>
+  <option value="Disquaire">Disquaire</option>
+  <option value="Chocolaterie%20-%20P%C3%A2tisserie">Chocolaterie et patisserie</option>
+  <option value="Caviste%20-%20Brasserie">Caviste</option>
 </select>
+
+<div id="nom_du_commerce">
+</div>
+<div id="adresses">
+</div>
+<div id="code_postal">
+</div>
+<div id="site_internet">
+</div>
+<div id="telephone">
+</div>
+
     <script src="./script.js"></script>
 </body>
 </html>
