@@ -7,11 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="typeCommerce">Faites votre choix:</label>
+ <br>
+ <br>
+    <h1>
+        <label for="typeCommerce" class="title">Besoin d'adresses pour vos achats de Noël à Paris ?</label>
+    </h1>
 <br>
 <br>
+
+<!-- <div id="picture"></div> -->
+
 <select name="commerces" id="typeCommerce" onchange="newSelect()">
-  <option value="">--Merci de choisir une option--</option>
+  <option value="">--Sélectionnez un type de boutique--</option>
   <option value="Jouets%20-%20Jeux">Jeux et jouets</option>
   <option value="Librairie">Librairie</option>
   <option value="Fleuriste">Fleuriste</option>
@@ -21,13 +28,13 @@
 </select>
 
 <table>
+<td><div id="code_postal">
+</div></td>
+
 <td><div id="nom_du_commerce">
 </div></td>
 
 <td><div id="adresses">
-</div></td>
-
-<td><div id="code_postal">
 </div></td>
 
 <td><div id="site_internet">
@@ -36,6 +43,8 @@
 <td><div id="telephone">
 </div></td>
 </table>
+
     <script src="./script.js"></script>
+
 </body>
 </html>

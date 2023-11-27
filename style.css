@@ -1,0 +1,65 @@
+html {
+    height: 100vh;
+    width: 100%;
+    background-image: url(christmas.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+text-align: center;
+font-family: italic;
+font-size: 300%;
+color: rgb(110, 93, 6)
+}
+
+select {
+    width: 720px;  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    border: 0;
+    margin-left:300px; 
+    margin-right: auto;
+    text-align: center ;
+    font-size: medium;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid rgb(110, 93, 6);
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th,
+  td {
+    padding: 20px;
+
+    border: 3px solid rgb(110, 93, 6);
+	border-radius: 4px;
+    
+  }
+
+/*table {width: 90px;  list-style-type: none;  margin: 0;  padding: 0;  border: 0;margin-left:160px; margin-right: auto;
+    text-align: center ;}*/
+/*div {width: 100px;  list-style-type: none;  margin: 0;  padding: 0;  border: 0;margin-left:160px; margin-right: auto;
+        text-align: center ;}*/

@@ -29,6 +29,7 @@ const onChange = async () => {
             document.getElementById("nom_du_commerce").innerHTML +=shop.nom_du_commerce
             document.getElementById("adresses").innerHTML +=shop.adresse
             document.getElementById("code_postal").innerHTML +=shop.code_postal
+            
             document.getElementById("site_internet").innerHTML +=shop.site_internet
             document.getElementById("telephone").innerHTML +=shop.telephone
         //<div id=${results.adresse}>
