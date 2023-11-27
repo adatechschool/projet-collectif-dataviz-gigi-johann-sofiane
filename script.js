@@ -62,14 +62,16 @@ const newSelect = async () => {
         //document.getElementById("adresses").innerHTML = 
         shops.map((shop) => {
             //console.log(shop.adresse)
-            document.getElementById("nom_du_commerce").innerHTML +=shop.nom_du_commerce
-            document.getElementById("adresses").innerHTML +=shop.adresse
-            document.getElementById("code_postal").innerHTML +=shop.code_postal
-            document.getElementById("site_internet").innerHTML +=shop.site_internet
-            document.getElementById("telephone").innerHTML +=shop.telephone
+            document.getElementById("nom_du_commerce").innerHTML +=shop.nom_du_commerce + `<br>`
+            document.getElementById("adresses").innerHTML +=shop.adresse  + `<br>`
+            document.getElementById("code_postal").innerHTML +=shop.code_postal + `<br>`
+            document.getElementById("site_internet").innerHTML +=shop.site_internet + `<br>`
+            document.getElementById("telephone").innerHTML +=shop.telephone + `<br>`
+            }
+
+        
         //<div id=${results.adresse}>
         //<div/>
-         }
         )
     })
 }
