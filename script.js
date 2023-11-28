@@ -22,17 +22,32 @@ const onChange = async () => {
        shops = response2.results;
         console.log("test", shops)
 
+        document.getElementById("table").innerHTML = ""
+
         //document.getElementById("adresses").innerHTML = 
         shops.map((shop) => {
             //console.log(shop.adresse)
+            const trElement = document.createElement("tr")
+            const code_postalElement = document.createElement("td")
+            const nom_du_commerceElement = document.createElement("td")
+            const adressesElement = document.createElement("td")
+            const site_internetElement = document.createElement("td")
+            const telephoneElement = document.createElement("td")
 
-            document.getElementById("nom_du_commerce").innerHTML +=shop.nom_du_commerce
-            document.getElementById("adresses").innerHTML +=shop.adresse
-            document.getElementById("code_postal").innerHTML +=shop.code_postal
+            trElement.appendChild(code_postalElement)
+            trElement.appendChild(nom_du_commerceElement)
+            trElement.appendChild(adressesElement)
+            trElement.appendChild(site_internetElement)
+            trElement.appendChild(telephoneElement)
+
+            document.getElementById("table").appendChild(trElement)
             
-            document.getElementById("site_internet").innerHTML +=shop.site_internet
-            document.getElementById("telephone").innerHTML +=shop.telephone
-        //<div id=${results.adresse}>
+            code_postalElement.innerText =shop.code_postal 
+            nom_du_commerceElement.innerText = shop.nom_du_commerce
+            adressesElement.innerText = shop.adresse         
+            site_internetElement.innerText =shop.site_internet
+            telephoneElement.innerText = shop.telephone
+        //<div id=${results.adresse()}>
         //<div/>
          }
         )
@@ -40,13 +55,15 @@ const onChange = async () => {
 }
 
 const newSelect = async () => {
-            document.getElementById("nom_du_commerce").innerHTML = ""
+            /*document.getElementById("nom_du_commerce").innerHTML = ""
             document.getElementById("adresses").innerHTML =""
             document.getElementById("code_postal").innerHTML =""
             document.getElementById("site_internet").innerHTML =""
-            document.getElementById("telephone").innerHTML =""
+            document.getElementById("telephone").innerHTML =""*/
 
-    let value = typeCommerce.value;
+            document.getElementById("table").innerHTML = ""
+
+             let value = typeCommerce.value;
         console.log("valeur = "+value);
         let text = typeCommerce.options[typeCommerce.selectedIndex].text;
         console.log("texte =" +text);
@@ -63,16 +80,29 @@ const newSelect = async () => {
         //document.getElementById("adresses").innerHTML = 
         shops.map((shop) => {
             //console.log(shop.adresse)
-            document.getElementById("nom_du_commerce").innerHTML +=shop.nom_du_commerce + `<br>`
-            document.getElementById("adresses").innerHTML +=shop.adresse  + `<br>`
-            document.getElementById("code_postal").innerHTML +=shop.code_postal + `<br>`
-            document.getElementById("site_internet").innerHTML +=shop.site_internet + `<br>`
-            document.getElementById("telephone").innerHTML +=shop.telephone + `<br>`
-            }
+            const trElement = document.createElement("tr")
+            const code_postalElement = document.createElement("td")
+            const nom_du_commerceElement = document.createElement("td")
+            const adressesElement = document.createElement("td")
+            const site_internetElement = document.createElement("td")
+            const telephoneElement = document.createElement("td")
 
-        
-        //<div id=${results.adresse}>
+            trElement.appendChild(code_postalElement)
+            trElement.appendChild(nom_du_commerceElement)
+            trElement.appendChild(adressesElement)
+            trElement.appendChild(site_internetElement)
+            trElement.appendChild(telephoneElement)
+
+            document.getElementById("table").appendChild(trElement)
+            
+            code_postalElement.innerText =shop.code_postal
+            nom_du_commerceElement.innerText = shop.nom_du_commerce
+            adressesElement.innerText = shop.adresse          
+            site_internetElement.innerText =shop.site_internet
+            telephoneElement.innerText = shop.telephone
+        //<div id=${results.adresse()}>
         //<div/>
+         }
         )
     })
 }
